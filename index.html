@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Star of the Moment — free embeddable widget</title>
+<meta name="description" content="A free embeddable widget: give a date, a time and a place, and it finds the real star that was closest to directly overhead at that moment. Built for memorial pages, for people and pets."/>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 48px 20px 80px; color: #f2f3f7; background: #05051a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-image:
+      radial-gradient(900px 600px at 12% 0%, rgba(118,75,162,.25), transparent 60%),
+      radial-gradient(800px 600px at 92% 100%, rgba(64,86,160,.22), transparent 60%);
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  .kicker { color: #ffd166; font-size: 0.78rem; letter-spacing: .3em; text-transform: uppercase; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 2.1rem; line-height: 1.2; margin: 14px 0 10px; }
+  p.lead { color: rgba(255,255,255,.8); font-size: 1.02rem; line-height: 1.65; margin: 0 0 28px; }
+  iframe { width: 100%; max-width: 620px; height: 640px; border: 0; display: block; margin: 0 auto; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 1.25rem; margin: 44px 0 10px; }
+  pre { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 10px;
+        padding: 14px 16px; font-size: .82rem; overflow-x: auto; color: #ffe9b0; }
+  a { color: #ffd166; }
+  .foot { margin-top: 46px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12);
+          color: rgba(255,255,255,.62); font-size: .9rem; line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">A STAR NAMED · FREE WIDGET</div>
+  <h1>Star of the Moment</h1>
+  <p class="lead">Give a date, a time and a place. This widget computes the real star that was closest to directly overhead at that moment — the same astronomy that powers <a href="https://astarnamed.com">astarnamed.com</a>. Built for memorial pages, for people and pets; free to use anywhere.</p>
+
+  <iframe src="star-widget.html" title="Star of the moment widget"></iframe>
+
+  <h2>Embed it on your site</h2>
+  <p class="lead">Hosted version, always up to date:</p>
+  <pre>&lt;iframe src="https://astarnamed.com/embed/death-sky"
+  style="width:100%;max-width:560px;height:640px;border:0"
+  title="Star of the moment"&gt;&lt;/iframe&gt;</pre>
+  <p class="lead">Or self-host the single file — <code>star-widget.html</code> in this repo has no dependencies, no cookies, no tracking.</p>
+
+  <div class="foot">
+    The star is real; the name is a memorial — commercial naming is not recognized by the International Astronomical Union.<br/>
+    MIT licensed · Powered by <a href="https://astarnamed.com?utm_source=github&utm_medium=repo">A Star Named</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The star that was above them — A Star Named</title>
+<meta name="description" content="Computed from the recorded date, time and place with the same astronomy as our free calculator — no availability filtering, so the result never changes."/>
+<meta name="robots" content="noindex, nofollow"/>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: #0b0e18;
+  color: #f2f3f7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 14px;
+}
+.dsw {
+  max-width: 520px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 16px 16px 12px;
+}
+.dsw-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.dsw-kicker { margin: 0; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #ffd97a; }
+.dsw-lang { background: none; border: 0; color: rgba(255,255,255,0.6); font-size: 0.78rem; cursor: pointer; text-decoration: underline; padding: 0; }
+.dsw-title { margin: 4px 0 12px; font-family: Georgia, 'Times New Roman', serif; font-size: 1.18rem; line-height: 1.3; color: #fff; }
+.dsw-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.dsw-row > label { flex: 1 1 120px; min-width: 0; }
+.dsw-field { display: block; font-size: 0.75rem; color: rgba(255,255,255,0.6); margin: 0 0 4px; }
+.dsw input, .dsw select {
+  width: 100%; padding: 8px 10px; border-radius: 9px; box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,0.18); background: rgba(0,0,0,0.25); color: #fff; font-size: 0.92rem;
+}
+.dsw-sug { list-style: none; margin: 4px 0 0; padding: 0; max-height: 150px; overflow: auto;
+  border: 1px solid rgba(255,255,255,0.14); border-radius: 9px; background: #131726; }
+.dsw-sug button { display: block; width: 100%; text-align: left; background: none; border: 0; color: #fff;
+  padding: 7px 10px; font-size: 0.88rem; cursor: pointer; }
+.dsw-sug button:hover { background: rgba(255, 217, 122, 0.14); }
+.dsw-submit { margin-top: 12px; width: 100%; padding: 10px; border: 0; border-radius: 999px;
+  background: #ffd166; color: #1a1305; font-weight: 700; font-size: 0.95rem; cursor: pointer; }
+.dsw-submit:hover { background: #ffe094; }
+.dsw-err { margin: 10px 0 0; color: #ff9b9b; font-size: 0.86rem; }
+.dsw-result { margin-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 12px; }
+.dsw-inmem { margin: 0 0 6px; color: #ffd166; font-family: Georgia, serif; font-size: 0.98rem; }
+.dsw-label { margin: 0; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+.dsw-star { margin: 2px 0 6px; font-family: Georgia, serif; font-size: 1.16rem; color: #fff; }
+.dsw-facts { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0 0 8px; font-size: 0.84rem; color: rgba(255,255,255,0.78); }
+.dsw-note { margin: 8px 0 0; font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+.dsw-cta { display: inline-block; margin-top: 10px; color: #ffd166; font-weight: 600; text-decoration: none; font-size: 0.92rem; }
+.dsw-cta:hover { text-decoration: underline; }
+.dsw-foot { margin: 12px 0 0; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.76rem; color: rgba(255,255,255,0.5); }
+.dsw-foot a { color: rgba(255,255,255,0.72); }
+</style>
+</head>
+<body>
+<div class="dsw" id="dsw">
+  <div class="dsw-head">
+    <p class="dsw-kicker" id="kicker">A Star Named · free tool</p>
+    <button type="button" class="dsw-lang" id="lang">中文</button>
+  </div>
+  <h1 class="dsw-title" id="title">The star that was above them</h1>
+  <div class="dsw-row">
+    <label>
+      <span class="dsw-field" id="l-kind">&nbsp;</span>
+      <select id="kind">
+        <option value="person">A person</option>
+        <option value="pet">A pet</option>
+      </select>
+    </label>
+    <label>
+      <span class="dsw-field" id="l-name">&nbsp;</span>
+      <input id="name" type="text" maxlength="60" autocomplete="off"/>
+    </label>
+  </div>
+  <div class="dsw-row" style="margin-top:8px">
+    <label>
+      <span class="dsw-field" id="l-date">Date</span>
+      <input id="date" type="date"/>
+    </label>
+    <label>
+      <span class="dsw-field" id="l-time">Time</span>
+      <input id="time" type="time"/>
+    </label>
+  </div>
+  <label style="display:block;margin-top:8px">
+    <span class="dsw-field" id="l-place">&nbsp;</span>
+    <input id="place" type="text" autocomplete="off"/>
+  </label>
+  <ul class="dsw-sug" id="sug" hidden></ul>
+  <button type="button" class="dsw-submit" id="go">Find the star</button>
+  <p class="dsw-err" id="err" hidden></p>
+  <div class="dsw-result" id="result" hidden></div>
+  <p class="dsw-foot">Powered by <a href="https://astarnamed.com?utm_source=embed&amp;utm_medium=widget" target="_blank" rel="noopener">A Star Named</a> · <a id="full" href="https://astarnamed.com/death-sky/calculator?utm_source=embed&amp;utm_medium=widget&amp;utm_campaign=death-sky" target="_blank" rel="noopener">The star that was above them</a></p>
+</div>
+<script>
+(function () {
+  var API = 'https://astarnamed.com';
+  var CALC = 'https://astarnamed.com/death-sky/calculator?utm_source=embed&utm_medium=widget&utm_campaign=death-sky';
+  var T = { en: {kicker:'A Star Named · free tool',title:'The star that was above them',person:'A person',pet:'A pet',namePh:'Their name (optional)',date:'Date',time:'Time',placePh:'City or place',submit:'Find the star',searching:'Searching…',loading:'Computing…',errPlace:'Please choose a place from the list.',errGeneric:'Something went wrong. Please try again.',resultLabel:'Star closest to the zenith',mag:'Magnitude',dist:'Light-years away',offset:'From the zenith',note:'Computed from the recorded date, time and place with the same astronomy as our free calculator — no availability filtering, so the result never changes.',cta:'Keep this moment →',powered:'Powered by',toggle:'中文'}, zh: {kicker:'A Star Named · 免费工具',title:'那一刻,TA 头顶的那颗星',person:'一个人',pet:'一只宠物',namePh:'TA 的名字(可不填)',date:'日期',time:'时间',placePh:'城市或地点',submit:'找到那颗星',searching:'搜索中…',loading:'计算中…',errPlace:'请从下拉列表中选择一个地点。',errGeneric:'请求失败,请稍后再试。',resultLabel:'离天顶最近的那颗星',mag:'星等',dist:'距离(光年)',offset:'与天顶的角距',note:'由记录的日期、时刻与地点算出,与站内免费计算器同一套天文算法;结果不含任何库存过滤,永不随时间变化。',cta:'把这一刻留下来 →',powered:'由',toggle:'English'} };
+  var lang = (navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  var place = null, timer = null, busy = false;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function applyLang() {
+    var t = T[lang];
+    $('kicker').textContent = t.kicker;
+    $('title').textContent = t.title;
+    $('lang').textContent = t.toggle;
+    $('l-kind').textContent = t.person + ' / ' + t.pet;
+    $('l-name').textContent = t.namePh;
+    $('l-date').textContent = t.date;
+    $('l-time').textContent = t.time;
+    $('l-place').textContent = t.placePh;
+    $('go').textContent = t.submit;
+    $('kind').options[0].textContent = t.person;
+    $('kind').options[1].textContent = t.pet;
+    $('place').placeholder = t.placePh;
+    $('date').setAttribute('aria-label', t.date);
+    $('time').setAttribute('aria-label', t.time);
+    $('full').textContent = t.title + ' ↗';
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh' : 'en');
+  }
+
+  function fail(msg) {
+    var t = T[lang];
+    $('err').textContent = msg || t.errGeneric;
+    $('err').hidden = false;
+  }
+
+  function search() {
+    var q = $('place').value.trim();
+    if (q.length < 2) { $('sug').hidden = true; return; }
+    fetch(API + '/api/birth-star/geocode?lang=' + lang + '&q=' + encodeURIComponent(q))
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        var hits = (j && j.data) || [];
+        var box = $('sug');
+        box.innerHTML = '';
+        if (!hits.length) { box.hidden = true; return; }
+        hits.slice(0, 6).forEach(function (h) {
+          var li = document.createElement('li');
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.textContent = lang === 'zh' ? h.zh : h.en;
+          b.onclick = function () {
+            place = h;
+            $('place').value = lang === 'zh' ? h.zh : h.en;
+            box.hidden = true;
+          };
+          li.appendChild(b);
+          box.appendChild(li);
+        });
+        box.hidden = false;
+      })
+      .catch(function () { $('sug').hidden = true; });
+  }
+
+  function render(j) {
+    var t = T[lang];
+    var w = j && j.data && j.data.winner;
+    if (!w) { fail(); return; }
+    var name = $('name').value.trim();
+    var el = $('result');
+    el.innerHTML = '';
+    if (name) {
+      var inmem = document.createElement('p');
+      inmem.className = 'dsw-inmem';
+      inmem.textContent = ($('kind').value === 'pet' ? '🐾 ' : '🕊️ ') + name;
+      el.appendChild(inmem);
+    }
+    var label = document.createElement('p');
+    label.className = 'dsw-label';
+    label.textContent = t.resultLabel;
+    el.appendChild(label);
+    var star = document.createElement('p');
+    star.className = 'dsw-star';
+    star.textContent = (lang === 'zh' ? w.constellationZh : w.constellationEn) + ' · ' + w.gaiaSourceId;
+    el.appendChild(star);
+    var facts = document.createElement('div');
+    facts.className = 'dsw-facts';
+    [t.mag + ' ' + Number(w.mag).toFixed(2),
+     t.dist + ' ' + Math.round(w.distanceLy).toLocaleString(),
+     t.offset + ' ' + Number(w.distanceDeg).toFixed(2) + '°'].forEach(function (s) {
+      var sp = document.createElement('span');
+      sp.textContent = s;
+      facts.appendChild(sp);
+    });
+    el.appendChild(facts);
+    var note = document.createElement('p');
+    note.className = 'dsw-note';
+    note.textContent = t.note;
+    el.appendChild(note);
+    var cta = document.createElement('a');
+    cta.className = 'dsw-cta';
+    cta.href = CALC;
+    cta.target = '_blank';
+    cta.rel = 'noopener';
+    cta.textContent = t.cta;
+    el.appendChild(cta);
+    el.hidden = false;
+  }
+
+  function submit() {
+    var t = T[lang];
+    if (busy) return;
+    $('err').hidden = true;
+    $('result').hidden = true;
+    if (!place) {
+      if ($('place').value.trim().length > 1) { search(); fail(t.errPlace); return; }
+      fail(t.errPlace);
+      return;
+    }
+    if (!$('date').value || !$('time').value) { fail(); return; }
+    busy = true;
+    $('go').textContent = t.loading;
+    var qs = 'date=' + encodeURIComponent($('date').value) + '&time=' + encodeURIComponent($('time').value) +
+      '&latDeg=' + place.lat + '&lngDeg=' + place.lng + '&timeZone=' + encodeURIComponent(place.tz);
+    fetch(API + '/api/memorial/preview?' + qs)
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j || !j.success) { fail(j && j.error ? j.error : null); return; }
+        render(j);
+      })
+      .catch(function () { fail(); })
+      .then(function () { busy = false; $('go').textContent = T[lang].submit; });
+  }
+
+  $('lang').onclick = function () { lang = lang === 'en' ? 'zh' : 'en'; applyLang(); };
+  $('go').onclick = submit;
+  $('place').oninput = function () {
+    place = null;
+    clearTimeout(timer);
+    timer = setTimeout(search, 320);
+  };
+  applyLang();
+})();
+</script>
+</body>
+</html>
