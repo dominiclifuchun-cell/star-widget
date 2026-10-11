@@ -4,7 +4,7 @@ Give a date, a time and a place. The widget computes the real star that was clos
 
 It was built for memorial pages: someone you lost, a person or a pet, and a real star to look up at. It works for any moment you want to remember.
 
-**Live demo** — the hosted widget is at **https://astarnamed.com/embed/death-sky**, and this repo has a [GitHub Pages demo](https://YOUR-USERNAME.github.io/star-widget/).
+**Live demo** — the hosted widget is at **https://astarnamed.com/embed/death-sky**, and this repo has a [GitHub Pages demo](https://dominiclifuchun-cell.github.io/star-widget/).
 
 ## Use it in one line (recommended)
 
